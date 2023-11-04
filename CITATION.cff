@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "This code project is based on the book 'Things to Make and Do in the Fourth Dimension' by Matt Parker."
+authors:
+- name: Matt Parker
+- affiliation: Farrar, Straus and Giroux
+title: Things to Make and Do in the Fourth Dimension
+journal: "Making and Doing the Fourth Dimension"
+volume: "git@github.com:russellscooper/Making-and-Doing-the-4th-Dimension.git"
+year: 2015
