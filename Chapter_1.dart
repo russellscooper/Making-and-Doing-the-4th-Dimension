@@ -43,6 +43,7 @@ class Decimal extends Number<double> {
   }
 }
 
+//Another example
 class Integer extends Number<int> {
   Integer(int value) : super(value);
 
@@ -64,16 +65,53 @@ class Integer extends Number<int> {
   }
 }
 
-//Quick test
+class Binary extends Number<int> {
+  Binary(int value) : super(value);
+
+  @override
+  Binary operator +(Number<int> other) {
+    return Binary(value + other.value);
+  }
+
+  @override
+  Binary operator -(Number<int> other) {
+    return Binary(value + other.value);
+  }
+
+  @override
+  Binary operator *(Number<int> other) {
+    return Binary(value + other.value);
+  }
+
+  @override
+  Binary operator /(Number<int> other) {
+    return Binary(value + other.value);
+  }
+
+  @override
+  String toString() {
+    //radix helps to work with different bases.
+    return value.toRadixString(2);
+  }
+}
+
+//Quick tests
 void main() {
   Decimal number_1 = Decimal(10);
   Decimal number_2 = Decimal(5);
+
   Integer number_01 = Integer(10);
   Integer number_02 = Integer(5);
 
+  Binary number_001 = Binary(10);
+  Binary number_002 = Binary(5);
+
   Decimal sum_1 = number_1 + number_2;
   Integer sum_2 = number_01 + number_02;
+  Binary sum_3 = number_001 + number_002;
 
-  print(sum_1);
-  print(sum_2);
+  print('Result of 10 + 5...');
+  print('Decimal $sum_1');
+  print('Integer $sum_2');
+  print('Binary $sum_3');
 }
