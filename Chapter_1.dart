@@ -8,6 +8,7 @@
  I started thinking deeper about this idea of abstracting numbers from digits.  
  This is the end result. */
 
+//The abstract number class
 abstract class Number<T> {
   T value;
 
